@@ -1,19 +1,7 @@
 # A small description of what this will try to accomplish
 
-# Users are variable. An approach we are doing is having each student in our class make a user
-# that searches specifically for something in each website that they visit. In a sense
-# we can say that these are "hard-coded" unique users.
 
-# What I want to do instead is make a version where...
-
-# This user, will generate a unique user from the websites content. This way we 
-# ensure that the user is interacting, though it will remain unique through the
-# use of randomness to determine how interested our user is. Additionally, filters
-# will be applied in to the contents based on this random variable called interest.
-
-#NOTE: the level of interest will partly be on just the KEYWORD user action.
-#      for the IMAGE and LINK user action, we will just randomly select how many of the images/links does it care about.
-#      and in the case of LINK action, it will randomly select the links that "interested" this unique user.
+#NOTE: there are commented out functions that introduce variability to this user. For the purpose of our baseline, they have been replaced by simpler functions.
 
 
 from selenium import webdriver
@@ -100,14 +88,6 @@ def findKeyword(driver, keyword):
 
     return num_occurrences
 
-def countElem(driver, tag_name):
-    # Get all elements for the specified tag_name
-    elements = driver.find_elements(By.TAG_NAME, tag_name)
-    
-    # Total number of elements
-    total_length = len(elements)
-
-    return total_length, elements
 
 #def countElem(driver, tag_name):
     # Get count of elements for the specified tag_name
@@ -123,6 +103,15 @@ def countElem(driver, tag_name):
     #elements_of_interest = random.sample(elements, num_elements_of_interest)
 
     #return num_elements_of_interest, elements_of_interest
+
+def countElem(driver, tag_name):
+    # Get all elements for the specified tag_name
+    elements = driver.find_elements(By.TAG_NAME, tag_name)
+    
+    # Total number of elements
+    total_length = len(elements)
+
+    return total_length, elements
 
 def clickLinks(driver, links):
     #find link or links and click on them....
