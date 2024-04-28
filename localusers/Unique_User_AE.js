@@ -4,9 +4,13 @@ const assert = require('assert');
 let total_reward_time = 0;
 
 async function countElem(id, driver) {
-    const selector = By.id(id);
-    const elements = await driver.wait(until.elementsLocated(selector), 1000);
-    return elements.length;
+    try{
+        const selector = By.id(id);
+        const elements = await driver.wait(until.elementsLocated(selector), 1000);
+        return elements.length;
+    } catch(error){
+        console.log(error);
+    }
 }
 
 async function findLink(href, driver) {
