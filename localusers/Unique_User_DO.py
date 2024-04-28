@@ -13,6 +13,7 @@ from selenium.webdriver.common.keys import Keys
 
 #Removes stop-words in the website and allows for a better choice in keywords chosen randomly
 import nltk
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 
 #allows for a weight to be assigned to words within website
