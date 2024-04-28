@@ -9,7 +9,7 @@ async function countElem(id, driver) {
         const elements = await driver.wait(until.elementsLocated(selector), 1000);
         return elements.length;
     } catch(error){
-        console.log(error);
+        return 0;
     }
 }
 
