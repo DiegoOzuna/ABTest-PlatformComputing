@@ -82,4 +82,5 @@ async function userAction(action, driver, reward_time, req_list){
         await driver.quit();
     }
     console.log(`Total reward time: ${total_reward_time} milliseconds`);
+    driver.quit();
  }())
