@@ -25,7 +25,11 @@ def userAction(driver):
     total_reward_time += userActions("IMAGE", driver, reward_time, imgTag)
     total_reward_time += userActions("LINK", driver, reward_time, linkTag)
 
-    return total_reward_time
+    print("I will sleep for", {total_reward_time})
+
+    time.sleep(total_reward_time)
+
+    
 
 
 
@@ -47,17 +51,12 @@ def userActions(action, driver, reward_time, req_list)->float:
                 num_words = findKeyword(driver, keyword)
                 print("appeared", num_words, "times")
                 reward_time_X = reward_time * num_words
-                time.sleep(reward_time_X)
                 total_reward_time += reward_time_X
-        else:
-            print("Program decided to not choose any word for keyword (this is not a bug)...")
     elif action.upper() == "IMAGE":
         item = countElem(driver, req_list)
         num_images = item[0]
         reward_time_X = reward_time*num_images
-        total_reward_time = reward_time_X
-        print("# of Images: ", num_images)
-        time.sleep(reward_time_X)
+        total_reward_time += reward_time_X
     elif action.upper() == "LINK":
         item = countElem(driver, req_list)
         num_links = item[0]
@@ -65,9 +64,8 @@ def userActions(action, driver, reward_time, req_list)->float:
         clickLinks(driver, item[1])
 
         reward_time_X = reward_time*num_links
-        total_reward_time = reward_time_X
-        print("# of Links: ", num_links)
-        time.sleep(reward_time_X)
+        total_reward_time += reward_time_X
+
     
     return total_reward_time
 
@@ -96,6 +94,11 @@ def countElem(driver, tag_name):
     # Total number of elements
     total_length = len(elements)
 
+    if total_length == 0:
+        print("found nothing with tag", {tag_name})
+    else:
+        print("found tags, ", {tag_name}, {total_length}, " time(s)")
+
     return total_length, elements
 
 
@@ -118,12 +121,7 @@ def main():
     #Navigate to your website
     driver.get("http://localhost:3000")
 
-    total_reward_time = userAction(driver)
-    
-
-    
-    driver.quit()
-    print("Presence Time:", total_reward_time)
+    userAction(driver)
 
 if __name__ == "__main__":                          #this lets us test it stand-alone. when imported, this wont pose an issue.
     main()
