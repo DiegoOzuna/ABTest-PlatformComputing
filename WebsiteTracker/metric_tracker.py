@@ -16,9 +16,7 @@ metrics = []
 num_clicks = 0
 
 
-for x in range(28, 62):
-    #ONCE THE USER POOL IS FINALIZED WE REMOVE THIS IF STATEMENT.
-    #For now we only run for user6 to debug this metric tracker file.
+for x in range(1, 62):
     if x != 5 and x != 13 and x != 19 and x != 28 and x != 38 and x != 49 and x != 50:
         print("STARTING USER ", {x})
         module_name = f"Users.user{x}"
