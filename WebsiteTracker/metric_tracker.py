@@ -16,22 +16,24 @@ metrics = []
 num_clicks = 0
 
 
-for x in range(1, 62):
+for x in range(28, 62):
     #ONCE THE USER POOL IS FINALIZED WE REMOVE THIS IF STATEMENT.
     #For now we only run for user6 to debug this metric tracker file.
-        print("STRARTING USER ", {x})
+    if x != 5 and x != 13 and x != 19 and x != 28 and x != 38 and x != 49 and x != 50:
+        print("STARTING USER ", {x})
         module_name = f"Users.user{x}"
         user_module = importlib.import_module(module_name)
 
 
         # Track presence time 
         start_time = time.time()       #start time
-        user_module.userAction(driver) #let user act   NOTE: USER KEEPS CLOSING DRIVER, SO WE RELAUNCH IT AFTER
+        user_module.userAction(driver) #let user act  NOTE: SOME USERS CLOSE THE CONNECTION 
         final_time = time.time()       #end time
+
+        driver.get("http://localhost:3000/") #a fail-safe to make sure everyone has the same link.
 
         print("User stayed on website for ",final_time-start_time, "seconds")
 
-        driver.get("http://localhost:3000/") #re-setup driver
 
 
 driver.quit()
