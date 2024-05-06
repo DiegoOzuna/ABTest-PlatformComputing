@@ -573,9 +573,6 @@ function App() {
             <img src="/crèmebrûlée.jpg" alt="Crème brûlée" />
         </div>
       </div>
-          <p>
-            Content of website 4
-          </p>
         </header>
       </div>
 
