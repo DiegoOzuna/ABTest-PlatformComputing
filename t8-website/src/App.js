@@ -541,7 +541,38 @@ function App() {
 
       <div className="Sub-website">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <h2>About Jasmin</h2>
+        <p> 
+            Hi, my name is Jasmin Flores. And I am a student at CSUSB. Moreover, I am pursuing my B.S. in Computer Science.
+        </p>
+        <p>
+            One of my favorite things to do is read. I just finished Slaughterhouse-Five, or The Children's Crusade: A Duty-Dance with Death, by Kurt Vonnegut. 
+            My next title is Invincible Compendium Volume 2 by Robert Kirkman and Ryan Ottley.
+        
+        </p>
+        <p>
+            Another one of my hobbies is baking. The latest dessert I made was crème brûlée, I make it often. But the last time I made it I could not find my torch 
+            so I used a hot spoon to melt the sugar onto the custard and it worked quite well actually. I was pleasantly surprised.
+        </p>
+
+        <div>
+            <h2>List of some of my favorites</h2>
+            <ul style = "listStyle">
+                <li>Color: Blue &#128160;</li>
+                <li>Book: Fight Club by Chuck Palahniuk</li>
+                <li>Song: Lovelier Girl by Beach House</li>
+                <li>Movie: Asteroid City directed by Wes Anderson</li>
+            </ul>
+        </div>
+
+        <div class="myLink">
+            Here is a link that directs you to my main Github account: <a href="https://github.com/jasflor">Jasmin's Main Github account</a>
+        </div>
+
+        <div>
+            <img src="/crèmebrûlée.jpg" alt="Crème brûlée" />
+        </div>
+      </div>
           <p>
             Content of website 4
           </p>
