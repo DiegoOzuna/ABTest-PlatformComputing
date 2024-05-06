@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import cat from "./images/cat_standing.png"
+import persona from "./images/Persona Banner.png"
+import hyrule from "./images/age_of_calamity_art.png"
 
 function App() {
   return (
