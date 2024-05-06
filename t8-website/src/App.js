@@ -104,49 +104,49 @@ function App() {
       <div className="Sub-website">
         <header className="App-header">
           <h1>About Annese</h1>
-  <div className='subHead'>Education</div>
-  <p>
-    I spent 2 and 1/2 years studying under the Pre-Computer Science Major at Cal
-    State LA. I did encounter some difficulties while I was there; the commute
-    was long and terrible, I was stalked within my first semester, one summer
-    session put me into credit debt, and I only took that summer session because
-    I previously had to withdraw from an entire semester. These experiences and
-    some other factors led to my decision to apply to transfer to CSUSB. I
-    transferred here under the Computer Science major, but I plan on switching
-    to Computer Systems in the Game Development concentration. I also plan on
-    minoring in Data Science while I'm here.
-  </p>
-  <div className='subHead'>Interests</div>
-  <p>
-    There are plenty of subjects I'm interested in but only a few that I'm
-    willing to share. To start off, I aboslutely LOVE video games. My favorite
-    series are Little Big Planet, or SackBoy, Persona, The Legend of Zelda,
-    Crash Bandicoot, Sonic the Hedgehog. I'm also into games like Elden Ring,
-    Fortnite, and anything Lego related. I'm also really into art and I used to
-    make animations when I was younger. My other interests range from the basics
-    like cartoons, manga, and music.
-  </p>
-  <img
-    src= {persona}
-    id='Persona'
-    alt='Persona Protagonists'
-  />
-  <img
-    src= {hyrule}
-    id='HyruleWarriors'
-    alt='Hyrule Warriors AOC Poster'
-  />
-  <div className="subHead">Personal Life</div>
-  <p>
-    There isn't anything thats very interesting going on in my personal life. I
-    could say I've been in a Jubilee video about breast sizes, I just hit 9
-    months in my first relationship, or I still live with my mom, but anybody
-    could say these things. I usually spend most of my time sitting in my room
-    if I'm not at school. On Fridays I visit my grandparents and we make
-    breakfast together, and I spend the weekends with my boyfriend (usually at
-    his place because his bed is bigger).
-  </p>
-  <a href="https://github.com/Annese3908/Platform-Computing">Repository Link</a>
+          <div className='subHead'>Education</div>
+          <p>
+            I spent 2 and 1/2 years studying under the Pre-Computer Science Major at Cal
+            State LA. I did encounter some difficulties while I was there; the commute
+            was long and terrible, I was stalked within my first semester, one summer
+            session put me into credit debt, and I only took that summer session because
+            I previously had to withdraw from an entire semester. These experiences and
+            some other factors led to my decision to apply to transfer to CSUSB. I
+            transferred here under the Computer Science major, but I plan on switching
+            to Computer Systems in the Game Development concentration. I also plan on
+            minoring in Data Science while I'm here.
+          </p>
+          <div className='subHead'>Interests</div>
+          <p>
+            There are plenty of subjects I'm interested in but only a few that I'm
+            willing to share. To start off, I aboslutely LOVE video games. My favorite
+            series are Little Big Planet, or SackBoy, Persona, The Legend of Zelda,
+            Crash Bandicoot, Sonic the Hedgehog. I'm also into games like Elden Ring,
+            Fortnite, and anything Lego related. I'm also really into art and I used to
+            make animations when I was younger. My other interests range from the basics
+            like cartoons, manga, and music.
+          </p>
+          <img
+            src= {persona}
+            id='Persona'
+            alt='Persona Protagonists'
+          />
+          <img
+            src= {hyrule}
+            id='HyruleWarriors'
+            alt='Hyrule Warriors AOC Poster'
+          />
+          <div className="subHead">Personal Life</div>
+          <p>
+            There isn't anything thats very interesting going on in my personal life. I
+            could say I've been in a Jubilee video about breast sizes, I just hit 9
+            months in my first relationship, or I still live with my mom, but anybody
+            could say these things. I usually spend most of my time sitting in my room
+            if I'm not at school. On Fridays I visit my grandparents and we make
+            breakfast together, and I spend the weekends with my boyfriend (usually at
+            his place because his bed is bigger).
+          </p>
+          <a href="https://github.com/Annese3908/Platform-Computing">Repository Link</a>
         </header>
       </div>
 
@@ -542,37 +542,36 @@ function App() {
       <div className="Sub-website">
         <header className="App-header">
           <h2>About Jasmin</h2>
-        <p> 
-            Hi, my name is Jasmin Flores. And I am a student at CSUSB. Moreover, I am pursuing my B.S. in Computer Science.
-        </p>
-        <p>
-            One of my favorite things to do is read. I just finished Slaughterhouse-Five, or The Children's Crusade: A Duty-Dance with Death, by Kurt Vonnegut. 
-            My next title is Invincible Compendium Volume 2 by Robert Kirkman and Ryan Ottley.
-        
-        </p>
-        <p>
-            Another one of my hobbies is baking. The latest dessert I made was crème brûlée, I make it often. But the last time I made it I could not find my torch 
-            so I used a hot spoon to melt the sugar onto the custard and it worked quite well actually. I was pleasantly surprised.
-        </p>
+          <p> 
+              Hi, my name is Jasmin Flores. And I am a student at CSUSB. Moreover, I am pursuing my B.S. in Computer Science.
+          </p>
+          <p>
+              One of my favorite things to do is read. I just finished Slaughterhouse-Five, or The Children's Crusade: A Duty-Dance with Death, by Kurt Vonnegut. 
+              My next title is Invincible Compendium Volume 2 by Robert Kirkman and Ryan Ottley.
+          
+          </p>
+          <p>
+              Another one of my hobbies is baking. The latest dessert I made was crème brûlée, I make it often. But the last time I made it I could not find my torch 
+              so I used a hot spoon to melt the sugar onto the custard and it worked quite well actually. I was pleasantly surprised.
+          </p>
 
-        <div>
-            <h2>List of some of my favorites</h2>
-            <ul style = "listStyle">
-                <li>Color: Blue &#128160;</li>
-                <li>Book: Fight Club by Chuck Palahniuk</li>
-                <li>Song: Lovelier Girl by Beach House</li>
-                <li>Movie: Asteroid City directed by Wes Anderson</li>
-            </ul>
-        </div>
+          <div>
+              <h2>List of some of my favorites</h2>
+              <ul >
+                  <li>Color: Blue &#128160;</li>
+                  <li>Book: Fight Club by Chuck Palahniuk</li>
+                  <li>Song: Lovelier Girl by Beach House</li>
+                  <li>Movie: Asteroid City directed by Wes Anderson</li>
+              </ul>
+          </div>
 
-        <div class="myLink">
-            Here is a link that directs you to my main Github account: <a href="https://github.com/jasflor">Jasmin's Main Github account</a>
-        </div>
+          <div class="myLink">
+              Here is a link that directs you to my main Github account: <a href="https://github.com/jasflor">Jasmin's Main Github account</a>
+          </div>
 
-        <div>
-            <img src="/crèmebrûlée.jpg" alt="Crème brûlée" />
-        </div>
-      </div>
+          <div>
+              <img src="/crèmebrûlée.jpg" alt="Crème brûlée" />
+          </div>
         </header>
       </div>
 
