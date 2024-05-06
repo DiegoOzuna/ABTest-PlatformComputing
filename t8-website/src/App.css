@@ -188,3 +188,17 @@ div.desc {
   display: table;
   clear: both;
 }
+
+ 
+.listStyle{
+  border: '1px solid #088F8F';
+  padding: '6px';
+  margin: '2px';
+}
+  
+.myLink{
+  text-align: center;
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgb(133, 137, 141);
+}
