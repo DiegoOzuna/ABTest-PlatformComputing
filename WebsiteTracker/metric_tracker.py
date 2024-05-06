@@ -16,10 +16,10 @@ metrics = []
 num_clicks = 0
 
 
-for x in range(1, 62):
+for x in range(1, 61):
     if x != 5 and x != 13 and x != 19 and x != 28 and x != 38:
         print("STARTING USER ", {x})
-        module_name = f"Users.user{x}"
+        module_name = f"Users.user{x}"  #module_name will also be our ID for database entries.
         user_module = importlib.import_module(module_name)
 
 
@@ -30,8 +30,16 @@ for x in range(1, 62):
 
         driver.get("http://localhost:3000/") #a fail-safe to make sure everyone has the same link.
 
-        print("User stayed on website for ",final_time-start_time, "seconds")
+        presenceTime = final_time-start_time
+
+        print("User stayed on website for ",presenceTime, "seconds")
+
+        metrics.append({
+            "id": module_name,
+            "presence_time": presenceTime
+    })
 
 
+print(metrics)
 
 driver.quit()
