@@ -17,7 +17,7 @@ num_clicks = 0
 
 
 for x in range(1, 62):
-    if x != 5 and x != 13 and x != 19 and x != 28 and x != 38 and x != 49 and x != 50:
+    if x != 5 and x != 13 and x != 19 and x != 28 and x != 38:
         print("STARTING USER ", {x})
         module_name = f"Users.user{x}"
         user_module = importlib.import_module(module_name)
