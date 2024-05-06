@@ -76,5 +76,20 @@ p, .listClass{
   margin-left: auto;
   margin-right: auto;
   width: 20%;
-  
+}
+
+#Persona{
+  float:center;
+  width:854px;
+  height:480px;
+}
+#HyruleWarriors{
+  float:center;
+  width: 480px;
+  height:480px;
+}
+
+.subHead{
+  font-weight:bold;
+  padding: 5px;
 }
