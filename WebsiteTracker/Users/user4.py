@@ -27,9 +27,9 @@ def clickLink(driver):
         link.click()
         clickCount += 1
         time.sleep(3)
-        driver.switch_to.window(driver.window_handles[1])
-        driver.close()
-        driver.switch_to.window(driver.window_handles[0])
+        #driver.switch_to.window(driver.window_handles[1])
+        #driver.close()
+        #driver.switch_to.window(driver.window_handles[0])
     return clickCount
 
 def useAction(action, driver, reward_time, req_list)->float:
@@ -67,8 +67,8 @@ def userAction(driver):
     tags = ["img"]
 
     total_reward_time = useAction("KEYWORD", driver, reward_time, keywords)
-    total_reward_time += useAction("IMAGES", driver, reward_time, tags)
-    total_reward_time += useAction("READER", driver, reward_per_word, "")
+    #total_reward_time += useAction("IMAGES", driver, reward_time, tags)
+    #total_reward_time += useAction("READER", driver, reward_per_word, "")
     total_reward_time += useAction("LINK", driver, reward_per_link, "")
 
     # For debugging
