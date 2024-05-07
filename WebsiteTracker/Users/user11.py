@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import StaleElementReferenceException
 import re
 import csv
 
@@ -15,15 +16,19 @@ def findKeyword(driver, keyword)->bool:
 def clickLink(driver):
     links = driver.find_elements(By.TAG_NAME, "a")
     clickCount = 0
-    for link in links:
-        
-        link.click()
-        clickCount += 1
-        time.sleep(3)
-        #driver.switch_to.window(driver.window_handles[1])
-        #driver.close()
-        #driver.switch_to.window(driver.window_handles[0])
+    for i in range(len(links)):
+        try:
+            links[i].click()
+            clickCount += 1
+            time.sleep(3)
+        except StaleElementReferenceException:
+            print("StaleElementReferenceException encountered. Refreshing links and retrying...")
+            links = driver.find_elements(By.TAG_NAME, "a")
+            links[i].click()
+            clickCount += 1
+            time.sleep(3)
     return clickCount
+
 
 def useAction(action, driver, reward_time, req_list)->float:
     total_reward_time = 0
@@ -56,7 +61,7 @@ def userAction(driver):
     tags = ["img"]
 
     total_reward_time = useAction("KEYWORD", driver, reward_time, keywords)
-    total_reward_time += useAction("IMAGES", driver, reward_time, tags)
+    #total_reward_time += useAction("IMAGES", driver, reward_time, tags)
     total_reward_time += useAction("LINK", driver, reward_per_link, "")
 
     print("Presence Time:", total_reward_time, " seconds.")
