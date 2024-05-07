@@ -20,9 +20,9 @@ def clickLink(driver):
         link.click()
         clickCount += 1
         time.sleep(3)
-        driver.switch_to.window(driver.window_handles[1])
-        driver.close()
-        driver.switch_to.window(driver.window_handles[0])
+        #driver.switch_to.window(driver.window_handles[1])
+        #driver.close()
+        #driver.switch_to.window(driver.window_handles[0])
     return clickCount
 
 def useAction(action, driver, reward_time, req_list)->float:
