@@ -1,5 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 
 def findText(driver, keyword):
@@ -18,16 +20,23 @@ def countTagElem(driver, tag_name) -> int:
     return count
 
 def checkLink(driver, reward_time) -> float:
-    links = driver.find_elements(By.TAG_NAME, "a")
     total_reward_time = 0
+    links = driver.find_elements(By.TAG_NAME, "a")
+    num_links = len(links)
 
-    for link in links:
-        link.click()
-        print("Link found and clicked")
-        total_reward_time += reward_time
-        time.sleep(reward_time)
+    for i in range(num_links):
+        try:
+            # Find the links on each iteration
+            links = driver.find_elements(By.TAG_NAME, "a")
+            driver.execute_script("window.open('" + links[i].get_attribute('href') + "');")
+            print("Link found and opened in a new tab")
+            total_reward_time += reward_time
+            time.sleep(reward_time)
+        except Exception as e:
+            print(f"Failed to open the link in a new tab due to: {str(e)}")
 
     return total_reward_time
+
 
 def userAction(driver):
     reward_time = 10
