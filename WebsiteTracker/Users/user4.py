@@ -2,6 +2,7 @@ import time
 import csv
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import StaleElementReferenceException
 import re
 
 def countElem(driver, tag_name)->int:
@@ -22,14 +23,17 @@ def wordCount(driver):
 def clickLink(driver):
     links = driver.find_elements(By.TAG_NAME, "a")
     clickCount = 0
-    for link in links:
-        # opens link and then waits 3 seconds then switches to new window and closes it
-        link.click()
-        clickCount += 1
-        time.sleep(3)
-        #driver.switch_to.window(driver.window_handles[1])
-        #driver.close()
-        #driver.switch_to.window(driver.window_handles[0])
+    for i in range(len(links)):
+        try:
+            links[i].click()
+            clickCount += 1
+            time.sleep(3)
+        except StaleElementReferenceException:
+            print("StaleElementReferenceException encountered. Refreshing links and retrying...")
+            links = driver.find_elements(By.TAG_NAME, "a")
+            links[i].click()
+            clickCount += 1
+            time.sleep(3)
     return clickCount
 
 def useAction(action, driver, reward_time, req_list)->float:
