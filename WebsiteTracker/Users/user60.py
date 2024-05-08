@@ -12,7 +12,7 @@ def userAction(driver):
     for tag in tags:
         num_p = countElem(driver, tag)
         total_reward_time += reward_time*num_p
-        time.sleep(reward_time)
+        time.sleep(total_reward_time)
         
     print("Presence Time:", total_reward_time, "seconds")
 
