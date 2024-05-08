@@ -2,6 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 import time
 import random
 
@@ -36,7 +38,6 @@ def scroll_images(driver):
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
     time.sleep(2)  # Simulate time spent scrolling
 
-# Function to simulate clicking on links
 def click_links(driver):
     # Find all anchor elements on the page
     links = driver.find_elements(By.TAG_NAME, "a")
@@ -47,7 +48,8 @@ def click_links(driver):
             # Click on a random clickable link
             random_link = random.choice(clickable_links)
             try:
-                random_link.click()
+                # Open the link in a new tab by sending 'CTRL + CLICK' command
+                ActionChains(driver).key_down(Keys.CONTROL).click(random_link).key_up(Keys.CONTROL).perform()
                 time.sleep(3)  # Simulate time spent loading the new page
             except Exception as e:
                 print("Error occurred while clicking on a link:", e)

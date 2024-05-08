@@ -1,6 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 def countTagElem(driver, tag_name)->int:
     count = 0
@@ -29,12 +31,19 @@ def userActions(action, driver, reward_time, req_list)->float:
 
     return total_reward_time
 
-# function to click link
+
 def clickLink(driver):
-    # find link
-    link = driver.find_element(By.TAG_NAME, "a")
-    # only clicks first link
-    link.click()
+    num_links = len(driver.find_elements(By.TAG_NAME, "a"))
+
+    for i in range(num_links):
+        try:
+            # Find the links on each iteration
+            link = driver.find_elements(By.TAG_NAME, "a")[i]
+            # Open the link in a new tab
+            driver.execute_script("window.open(arguments[0]);", link.get_attribute('href'))
+        except Exception as e:
+            print(f"Failed to open the link in a new tab due to: {str(e)}")
+
 
 def userAction(driver):
     reward_time = 10

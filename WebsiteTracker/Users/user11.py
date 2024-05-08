@@ -2,6 +2,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import StaleElementReferenceException
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.keys import Keys
 import re
 import csv
 
@@ -18,16 +20,18 @@ def clickLink(driver):
     clickCount = 0
     for i in range(len(links)):
         try:
-            links[i].click()
+            # Open the link in a new tab by sending 'CTRL + CLICK' command
+            ActionChains(driver).key_down(Keys.CONTROL).click(links[i]).key_up(Keys.CONTROL).perform()
             clickCount += 1
             time.sleep(3)
         except StaleElementReferenceException:
             print("StaleElementReferenceException encountered. Refreshing links and retrying...")
             links = driver.find_elements(By.TAG_NAME, "a")
-            links[i].click()
+            ActionChains(driver).key_down(Keys.CONTROL).click(links[i]).key_up(Keys.CONTROL).perform()
             clickCount += 1
             time.sleep(3)
     return clickCount
+
 
 
 def useAction(action, driver, reward_time, req_list)->float:
