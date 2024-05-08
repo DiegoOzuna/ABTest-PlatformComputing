@@ -3,8 +3,27 @@ import json
 import random
 import importlib  # will be used to dynamically use user scripts located in Users
 
+# This is will for database storage.
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+
+
+# Fetch the service account key JSON file contents
+cred = credentials.Certificate("./credentials.json")
+
+# Initialize the app with a service account, granting admin privileges
+firebase_admin.initialize_app(cred, {
+    'databaseURL': 'https://ab-test-37c5e-default-rtdb.firebaseio.com/'
+})
+
+# As an admin, the app has access to read and write all data, regardless of Security Rules
+ref = db.reference('iteration 1')
+
+
 
 # Initialize browser
 driver = webdriver.Chrome()
@@ -12,8 +31,6 @@ driver = webdriver.Chrome()
 # Navigate to your website 
 driver.get("http://localhost:3000/")
 
-metrics = []
-num_clicks = 0
 
 random.seed(1)  # Set a fixed seed for the random number generator
 
@@ -37,18 +54,14 @@ for group_name, group in [("control", control_group), ("test", test_group)]:
         user_module.userAction(driver)  # let user act  NOTE: SOME USERS CLOSE THE CONNECTION 
         final_time = time.time()  # end time
 
-        driver.get("http://localhost:3000/")  # a fail-safe to make sure everyone has the same link.
-
         presenceTime = final_time - start_time
 
         print("User stayed on website for ", presenceTime, "seconds")
 
-        metrics.append({
-            "id": module_name,
-            "presence_time": presenceTime,
-            "group": group_name  # Add the group name to the metrics
+        # Save this to Firebase
+        users_ref = ref.child(f"{group_name}/{x}")  # Add the user ID to the reference
+        users_ref.set({
+            "presence_time": presenceTime
         })
-
-print(metrics)
 
 driver.quit()
