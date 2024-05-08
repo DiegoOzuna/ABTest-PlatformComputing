@@ -17,24 +17,23 @@ def countTagElem(driver, tag_name):
 def userAction(driver):
     total_reward_time = 0
     reward_time = 10
-    helper = ["students", "another"]
+    actions = [
+        ("IMAGE", ["img"]),
+        ("BUTTON", ["button"])
+    ]
     print("in userAction")
-    for actions in helper:
-        actions = [
-            ("IMAGE", ["img"]),
-            ("BUTTON", ["button"])
-        ]
-        for action_type, req_list in actions:
-            if action_type.upper() == "IMAGE":
-                num_images = countTagElem(driver, req_list)
-                total_reward_time += reward_time * num_images
-                time.sleep(total_reward_time)
-            elif action_type.upper() == "BUTTON":
-                num_button = countTagElem(driver, req_list)
-                total_reward_time += reward_time * num_button
-                time.sleep(total_reward_time)
+    for action_type, req_list in actions:
+        if action_type.upper() == "IMAGE":
+            num_images = countTagElem(driver, req_list)
+            total_reward_time += reward_time * num_images
+            time.sleep(reward_time * num_images)
+        elif action_type.upper() == "BUTTON":
+            num_button = countTagElem(driver, req_list)
+            total_reward_time += reward_time * num_button
+            time.sleep(reward_time * num_button)
 
     return total_reward_time
+
 
 def main():
     # Initialize browser
