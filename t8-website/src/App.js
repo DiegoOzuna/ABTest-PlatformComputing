@@ -173,7 +173,7 @@ function App() {
           />
           <img
             src= {crash}
-            id='Crash Bandicoot'
+            id='CrashBandicoot'
             alt='Crash N Sane Trilogy'
           />
           <img
