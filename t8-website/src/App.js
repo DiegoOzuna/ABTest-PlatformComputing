@@ -1,6 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import cat from "./images/cat_standing.png"
+
+import cat from "./images/DO/cat_standing.png"
+import lstm from "./images/DO/lstm.png"
+import ai from "./images/DO/brainCHIP.webp"
+import seal from "./images/DO/CSU_San_Bernardino_seal.svg.png"
+import yote from "./images/DO/csusbyote.png"
+import github from "./images/DO/github.jpeg"
+
+
+
+
 import persona from "./images/Persona Banner.png"
 import hyrule from "./images/age_of_calamity_art.png"
 
@@ -83,8 +93,14 @@ function App() {
             If you have questions about stuff in Comp Sci or Math I will try to help, as helping others also helps me. :)
         </p>
 
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <img src={github} alt="github" style={{width: '30%', height: 'auto'}}/>
+        </div>
+
         <div class="highlightGIT">
-            <a href="https://github.com/DiegoOzuna/Platform-Computing">My GITHUB Page</a>
+            <img src={seal} alt="csusbseal" style={{width: '10%', height: 'auto'}}/>
+            <a href="https://github.com/DiegoOzuna/Platform-Computing">MY GITHUB PAGE</a>
+            <img src={yote} alt="csusbyote" style={{width: '10%', height: 'auto'}}/>
         </div>
 
         <div>
@@ -96,11 +112,15 @@ function App() {
                 <li>CSE 5120 : Intro Artificial Intelligence</li>
                 <li>CSE 5250 : Parallel Algorithms</li>
                 <li>CSE 5953 : Independent Study</li>
+                <img src={lstm} alt="lstm" class="center"/>
+                <img src={ai} alt="lstm" class="center"/>
             </ol>
             <p>Two of my classes are online, the others are in person Monday and Wednesday.
             </p>
         </div>
         <img src={cat} alt="cat" class="center"/>
+        
+
         <input name="my-text" placeholder="hello"></input>
         <button name="button">Hello</button>
         </div>
