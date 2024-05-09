@@ -571,6 +571,8 @@ function App() {
 
           <div>
               <img src="/crèmebrûlée.jpg" alt="Crème brûlée" />
+              <img src="/Fight_Club.jpg" alt="Fight Club book cover" />
+              <img src="/Asteroid_City.jpg" alt="Asteroid City alien" />
           </div>
         </header>
       </div>
