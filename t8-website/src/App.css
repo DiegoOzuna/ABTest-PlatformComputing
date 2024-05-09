@@ -87,6 +87,21 @@ p, .listClass{
   width: 480px;
   height:480px;
 }
+#LBP{
+  float:center;
+  width: 480px;
+  height:480px;
+}
+#CrashBandicoot{
+  float:center;
+  width:854px;
+  height:480px;
+}
+#SonicAndFriends{
+  float:center;
+  width:854px;
+  height:480px;
+}
 
 .subHead{
   font-weight:bold;
