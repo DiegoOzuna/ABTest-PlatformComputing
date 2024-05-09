@@ -4,6 +4,13 @@ import cat from "./images/cat_standing.png"
 import persona from "./images/Persona Banner.png"
 import hyrule from "./images/age_of_calamity_art.png"
 
+import creme from "./images/crèmebrûlée.jpg"
+import fightclub from "./images/Fight_Club.jpg"
+import beachhouse from "./images/Beach_House.jpg"
+import asteroidcity from "./images/Asteroid_City.jpg"
+import invincible from "./images/Invincible.jpg"
+import slaughterhouse from "./images/Slaughterhouse_Five.jpg"
+
 import Bear1 from "./images/alaska/Bear1.png"
 import Bear2 from "./images/alaska/Bear2.png"
 import Denali from "./images/alaska/Denali.png"
@@ -570,12 +577,12 @@ function App() {
           </div>
 
           <div>
-              <img src="/crèmebrûlée.jpg" alt="Crème brûlée" />
-              <img src="/Fight_Club.jpg" alt="Fight Club book cover" />
-              <img src="/Beach_House.jpg" alt="Beach House album cover" />
-              <img src="/Asteroid_City.jpg" alt="Asteroid City alien" />
-              <img src="/Invincible.jpg" alt="Invincible text" />
-              <img src="/Slaughterhouse_Five.jpg" alt="Slaughterhouse-Five book cover" />
+              <img src={creme} alt="Crème brûlée" />
+              <img src={fightclub} alt="Fight Club book cover" />
+              <img src={beachhouse} alt="Beach House album cover" />
+              <img src={asteroidcity} alt="Asteroid City alien" />
+              <img src={invincible} alt="Invincible text" />
+              <img src={slaughterhouse} alt="Slaughterhouse-Five book cover" />
           </div>
         </header>
       </div>
