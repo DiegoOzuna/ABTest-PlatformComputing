@@ -21,7 +21,7 @@ firebase_admin.initialize_app(cred, {
 })
 
 # As an admin, the app has access to read and write all data, regardless of Security Rules
-ref = db.reference('iteration 1')
+ref = db.reference('iteration 2')
 
 
 
