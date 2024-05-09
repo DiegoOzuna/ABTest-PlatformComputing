@@ -13,6 +13,9 @@ import github from "./images/DO/github.jpeg"
 
 import persona from "./images/Persona Banner.png"
 import hyrule from "./images/age_of_calamity_art.png"
+import sonic from ".images/sonic_and_friends.jpg"
+import lbp from "./images/lbp.png"
+import crash from "./images/crashbandicoot.png"
 
 import creme from "./images/crèmebrûlée.jpg"
 import fightclub from "./images/Fight_Club.jpg"
@@ -162,6 +165,21 @@ function App() {
             src= {hyrule}
             id='HyruleWarriors'
             alt='Hyrule Warriors AOC Poster'
+          />
+          <img
+            src= {sonic}
+            id='SonicAndFriends'
+            alt='Sonic and Friends'
+          />
+          <img
+            src= {crash}
+            id='Crash Bandicoot'
+            alt='Crash N Sane Trilogy'
+          />
+          <img
+            src= {lbp}
+            id='LBP'
+            alt='Little Big Planet Games'
           />
           <div className="subHead">Personal Life</div>
           <p>
