@@ -13,7 +13,7 @@ import github from "./images/DO/github.jpeg"
 
 import persona from "./images/Persona Banner.png"
 import hyrule from "./images/age_of_calamity_art.png"
-import sonic from ".images/sonic_and_friends.jpg"
+import sonic from "./images/sonic_and_friends.jpg"
 import lbp from "./images/lbp.png"
 import crash from "./images/crashbandicoot.png"
 
