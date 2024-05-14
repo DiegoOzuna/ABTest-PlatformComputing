@@ -1,6 +1,9 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.common.exceptions import StaleElementReferenceException
 
 def findText(driver, keyword):
     if keyword.lower() in driver.page_source.lower():
@@ -24,12 +27,14 @@ def checkLink(driver, reward_time) -> float:
     total_reward_time = 0
 
     for link in links:
-        link.click()
+        # Open the link in a new tab by sending 'CTRL + CLICK' command
+        ActionChains(driver).key_down(Keys.CONTROL).click(link).key_up(Keys.CONTROL).perform()
         print("Link found and clicked")
         total_reward_time += reward_time
         time.sleep(reward_time)
 
     return total_reward_time
+
 
 def userActions(action, driver, reward_time, req_list) -> float:
     total_reward_time = 0
