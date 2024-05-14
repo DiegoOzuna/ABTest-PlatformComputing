@@ -32,7 +32,7 @@ driver = webdriver.Chrome()
 driver.get("http://localhost:3000/")
 
 
-random.seed(1)  # Set a fixed seed for the random number generator
+random.seed(42)  # Set a fixed seed for the random number generator
 
 exclude_numbers = {5, 13, 19, 28, 38}  # Numbers to be excluded
 numbers = [x for x in range(1, 62) if x not in exclude_numbers]  # Create a list of numbers from 1 to 61 excluding the numbers above
