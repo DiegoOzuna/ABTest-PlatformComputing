@@ -1,6 +1,9 @@
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import StaleElementReferenceException
 
 def findText(driver, keyword):
     if keyword.lower() in driver.page_source.lower():
@@ -24,10 +27,15 @@ def checkLink(driver, reward_time) -> float:
     total_reward_time = 0
 
     for link in links:
-        link.click()
-        print("Link found and clicked")
-        total_reward_time += reward_time
-        time.sleep(reward_time)
+        try:
+            # Right click and open link in a new tab
+            ActionChains(driver).key_down(Keys.CONTROL).click(link).key_up(Keys.CONTROL).perform()
+            print("Link found and right-clicked to open in new tab")
+            total_reward_time += reward_time
+            time.sleep(reward_time)
+        except StaleElementReferenceException:
+            print("StaleElementReferenceException occurred. Element was not attached to the page document.")
+            continue
 
     return total_reward_time
 
