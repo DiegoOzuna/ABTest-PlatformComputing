@@ -156,31 +156,21 @@ function App() {
             make animations when I was younger. My other interests range from the basics
             like cartoons, manga, and music.
           </p>
-          <img
-            src= {persona}
-            id='Persona'
-            alt='Persona Protagonists'
-          />
-          <img
-            src= {hyrule}
-            id='HyruleWarriors'
-            alt='Hyrule Warriors AOC Poster'
-          />
-          <img
-            src= {sonic}
-            id='SonicAndFriends'
-            alt='Sonic and Friends'
-          />
-          <img
-            src= {crash}
-            id='CrashBandicoot'
-            alt='Crash N Sane Trilogy'
-          />
-          <img
-            src= {lbp}
-            id='LBP'
-            alt='Little Big Planet Games'
-          />
+          <a href= 'https://youtu.be/mrfWp5zGvU0?si=0lsWydq6FNsPGg-Y' target = '_blank'> 
+              <img src= {persona} id='Persona' alt='Persona Protagonists'/> 
+          </a>
+          <a href = 'https://youtu.be/uDMWRRAEogs?si=pTxqEAKxiOAW6DOe' target = '_blank'>
+              <img src= {hyrule} id='HyruleWarriors' alt='Hyrule Warriors AOC Poster'/>
+          </a>
+          <a href = 'https://youtu.be/MsL9pKdJ1A8?si=ZSWxZO9ZyT8kt_XG' target = '_blank'>
+              <img src= {sonic} id='SonicAndFriends' alt='Sonic and Friends'/>
+          </a>
+          <a href = 'https://youtu.be/F7G91RjVmvk?si=JXE7Lf-csg6QcBFk' target = '_blank'>
+              <img src= {crash} id='CrashBandicoot' alt='Crash N Sane Trilogy'/>
+          </a>
+          <a href = 'https://youtu.be/vdAULVrH0TE?si=VL01yugiufri_Cog' target = '_blank'>
+              <img src= {lbp} id='LBP' alt='Little Big Planet Games'/>
+          </a>
           <div className="subHead">Personal Life</div>
           <p>
             There isn't anything thats very interesting going on in my personal life. I
