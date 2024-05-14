@@ -605,18 +605,28 @@ function App() {
           </div>
 
           <div>
-              <img src={creme} alt="Crème brûlée" />
-              <img src={fightclub} alt="Fight Club book cover" />
-              <img src={beachhouse} alt="Beach House album cover" />
-              <img src={asteroidcity} alt="Asteroid City alien" />
-              <img src={invincible} alt="Invincible text" />
-              <img src={slaughterhouse} alt="Slaughterhouse-Five book cover" />
+              <a href= 'https://www.youtube.com/watch?v=2d5itWdDe24' target = '_blank'> 
+                <img src= {creme} alt='Crème brûlée'/> 
+              </a>
+
+              <a href= 'https://www.youtube.com/watch?v=qtRKdVHc-cE' target = '_blank'> 
+                <img src= {fightclub} alt='Fight Club book cover'/> 
+              </a>
+
+              <a href= 'https://www.youtube.com/watch?v=mT6OBxbYIUA' target = '_blank'> 
+                <img src= {beachhouse} alt='Beach House album cover'/> 
+              </a>
+
+              <a href= 'https://www.youtube.com/watch?v=9FXCSXuGTF4' target = '_blank'> 
+                <img src= {asteroidcity} alt='Asteroid City alien'/> 
+              </a>
+
+              <a href= 'https://www.youtube.com/watch?v=1Jz8LOnvoXE' target = '_blank'> 
+                <img src= {invincible} alt='Invincible text'/> 
+              </a>
           </div>
         </header>
       </div>
-
-
-
 
     </div>
   );
