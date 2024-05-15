@@ -21,15 +21,7 @@ firebase_admin.initialize_app(cred, {
 })
 
 # As an admin, the app has access to read and write all data, regardless of Security Rules
-ref = db.reference('iteration 2')
-
-
-
-# Initialize browser
-driver = webdriver.Chrome()
-
-# Navigate to your website 
-driver.get("http://localhost:3000/")
+ref = db.reference('iteration 3')
 
 
 random.seed(42)  # Set a fixed seed for the random number generator
@@ -48,6 +40,14 @@ for group_name, group in [("control", control_group), ("test", test_group)]:
         print("STARTING USER ", {x})
         module_name = f"Users.user{x}"  # module_name will also be our ID for database entries.
         user_module = importlib.import_module(module_name)
+
+        # Initialize browser for each user
+        driver = webdriver.Chrome()
+
+        # Navigate to your website 
+        driver.get("http://localhost:3000/")
+
+        time.sleep(10) #buffer time so that page is fully reloaded.
 
         # Track presence time 
         start_time = time.time()  # start time
