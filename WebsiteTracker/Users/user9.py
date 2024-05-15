@@ -61,11 +61,11 @@ def makeAction(action, driver, reward_time, req_list)->float:
     return total_reward_time
 
 def clickLink(driver):
-    
     links = driver.find_elements(By.TAG_NAME, "a")
-
     for link in links:
-        link.click()
+        # Open the link in a new tab
+        driver.execute_script("window.open('" + link.get_attribute('href') + "');")
+
 
 def clickButton(driver, button_name):
     
