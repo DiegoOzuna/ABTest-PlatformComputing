@@ -110,18 +110,18 @@ function App() {
             <p>Here is a list of my classes below...</p>
             <ol class = "listClass">
                 <li>CSE 4310 : Algorithm Analysis</li>
-                <li>CSE 4500 : Platforming Computing</li>
+                <li><a href="https://github.com/DiegoOzuna/Platform-Computing">CSE 4500 : Platforming Computing</a></li>
                 <li>CSE 5000 : Formal Languages and Automata</li>
-                <li>CSE 5120 : Intro Artificial Intelligence</li>
-                <li>CSE 5250 : Parallel Algorithms</li>
-                <li>CSE 5953 : Independent Study</li>
+                <li><a href="https://github.com/DiegoOzuna/Intro-Artificial-Intelligence">CSE 5120 : Intro Artificial Intelligence</a></li>
+                <li><a href="https://github.com/DiegoOzuna/Parallel_Programs">CSE 5250 : Parallel Algorithms</a></li>
+                <li><a href="https://github.com/DiegoOzuna/LSTM-Credit-Default/blob/main/Credit_Default.ipynb">CSE 5953 : Independent Study</a></li>
                 <img src={lstm} alt="lstm" class="center"/>
                 <img src={ai} alt="lstm" class="center"/>
             </ol>
             <p>Two of my classes are online, the others are in person Monday and Wednesday.
             </p>
         </div>
-        <img src={cat} alt="cat" class="center"/>
+        <a href = "https://www.youtube.com/watch?v=UXGkc0m8i_0&ab_channel=KermitMemeTemplates" ><img src={cat} alt="cat" class="center"/></a>
         
 
         <input name="my-text" placeholder="hello"></input>
